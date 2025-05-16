@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Deteksi Warna</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h2 {
+            color: #6b8e23; /* yellowgreen */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 8px;
+            border: 3px solid #6b8e23;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            background-color: #6b8e23;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #5a7d1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hasil Deteksi Warna</h2>
+        <p><strong>Warna Dominan:</strong> {{ color }}</p>
+        <p><strong>HSV:</strong> {{ hsv }}</p>
+        <img src="{{ image_url }}" alt="Hasil Gambar">
+        <br>
+        <a href="/">Coba Lagi</a>
+    </div>
+</body>
+</html>
